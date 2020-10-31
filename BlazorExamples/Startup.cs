@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorExamples.Data;
+using BlazorExamples.Stores.CounterStore;
+using BlazorExamples.Stores;
 
 namespace BlazorExamples
 {
@@ -29,6 +31,9 @@ namespace BlazorExamples
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+
+            services.AddScoped<CounterStore>();
+            services.AddScoped<IActionDispatcher, ActionDispatcher>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
