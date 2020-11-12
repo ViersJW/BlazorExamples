@@ -8,6 +8,7 @@ namespace BlazorExamples.Stores.CounterStore
     public class CounterState
     {
         public int Count { get; }
+        public string TestExceptionMessage { get; set; }
 
         public CounterState(int count)
         {
@@ -29,7 +30,7 @@ namespace BlazorExamples.Stores.CounterStore
 
         public CounterState GetState() => _state;
 
-        private void HandleActions(IAction action)
+        private async void HandleActions(IAction action)
         {
             switch (action.Name)
             {
@@ -39,10 +40,43 @@ namespace BlazorExamples.Stores.CounterStore
                 case DecrementAction.Decrement:
                     DecrementCount();
                     break;
+                case IncrementActionAsync.IncrementAsync:
+                    await IncrementCountAsync();
+                    break;
+                case ThrowTestExceptionActionAsync.TestExceptionActionAsync:
+                    await AsyncException();
+                    break;
                 default:
                     break;
             }
 
+        }
+
+        private async Task AsyncException()
+        {
+            try
+            {
+                await Task.Delay(1000);
+
+                throw new Exception("Thrown from async void handler");
+            }
+            catch (Exception ex)
+            {
+                _state.TestExceptionMessage = ex.Message;
+            }
+            finally
+            {
+                BroadcastStateChange();
+            }
+        }
+
+        private async Task IncrementCountAsync()
+        {
+            await Task.Delay(2000);
+            var count = _state.Count;
+            count++;
+            _state = new CounterState(count);
+            BroadcastStateChange();
         }
 
         private void IncrementCount()

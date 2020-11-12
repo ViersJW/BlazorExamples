@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace BlazorExamples.Stores.CounterStore
 {
-    public class IncrementAction : IAction
+    public class IncrementActionAsync : IAction
     {
-        public const string Increment = "INCREMENT";
-
-        public string Name => Increment;
+        public const string IncrementAsync = "INCREMENT_ASYNC";
+        public string Name => IncrementAsync;
     }
 }

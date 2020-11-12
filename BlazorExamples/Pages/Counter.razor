@@ -4,4 +4,11 @@
 
 <p>Current count: @CounterStore.GetState().Count</p>
 
+@if (!string.IsNullOrEmpty(CounterStore.GetState().TestExceptionMessage))
+{
+    <p>Test Exception message: @CounterStore.GetState().TestExceptionMessage</p>
+}
+
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="IncrementCountAsync">Click me Async</button>
+<button class="btn btn-primary" @onclick="ThrowAsyncException">Click me Async Exception</button>

@@ -14,6 +14,5 @@ namespace BlazorExamples.Stores
         public void UnSubscribe(Action<IAction> actionHandler) => _registeredActionHandlers -= actionHandler;
 
         public void Dispatch(IAction action) => _registeredActionHandlers?.Invoke(action);
-
     }
 }

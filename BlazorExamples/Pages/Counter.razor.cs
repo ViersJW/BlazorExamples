@@ -35,5 +35,15 @@ namespace BlazorExamples.Pages
         {
             ActionDispatcher.Dispatch(new IncrementAction()); //handle actions separately
         }
+
+        private void IncrementCountAsync()
+        {
+            ActionDispatcher.Dispatch(new IncrementActionAsync()); //handle actions separately
+        }
+
+        private void ThrowAsyncException()
+        {
+            ActionDispatcher.Dispatch(new ThrowTestExceptionActionAsync()); //handle actions separately
+        }    
     }
 }
