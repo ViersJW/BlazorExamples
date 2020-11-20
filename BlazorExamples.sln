@@ -5,13 +5,19 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorExamples", "BlazorExamples\BlazorExamples.csproj", "{8722F3AA-3214-46BB-B6AF-3978A83F5939}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASM_Examples.Server", "WASM_Examples\Server\WASM_Examples.Server.csproj", "{AC1765C3-4FB1-4441-9AF8-E94254A299A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorExamples.NET5", "BlazorExamples.NET5\BlazorExamples.NET5.csproj", "{364316F2-1425-4481-8E8C-B58EAC2209E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASM_Examples.Client", "WASM_Examples\Client\WASM_Examples.Client.csproj", "{E69468FF-6420-493A-A6F2-2AC5B5E55959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASM.Auth.Server", "WASM.Auth\Server\WASM.Auth.Server.csproj", "{0647029A-F6DF-4395-8F80-8F907648F22F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASM_Examples.Shared", "WASM_Examples\Shared\WASM_Examples.Shared.csproj", "{AB24AD84-874A-43E6-8084-4E2181F8D8B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASM.Auth.Client", "WASM.Auth\Client\WASM.Auth.Client.csproj", "{7A308126-1C94-41ED-A4FE-8227D6D291BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorExamples.NET5", "BlazorExamples.NET5\BlazorExamples.NET5.csproj", "{364316F2-1425-4481-8E8C-B58EAC2209E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WASM.Auth.Shared", "WASM.Auth\Shared\WASM.Auth.Shared.csproj", "{F14A8EFC-816D-4FA3-BF14-2EA305E76230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WASM.Template.Clear.Server", "WASM.Template.Clear\Server\WASM.Template.Clear.Server.csproj", "{1D4BB25D-3074-4BD6-8FF7-7E51CF3C29DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WASM.Template.Clear.Client", "WASM.Template.Clear\Client\WASM.Template.Clear.Client.csproj", "{72374A2D-E9B5-46C8-A1AA-66E2719EFEDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WASM.Template.Clear.Shared", "WASM.Template.Clear\Shared\WASM.Template.Clear.Shared.csproj", "{C30DCB65-BA5E-418D-8478-2BEE315113C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,22 +29,34 @@ Global
 		{8722F3AA-3214-46BB-B6AF-3978A83F5939}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8722F3AA-3214-46BB-B6AF-3978A83F5939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8722F3AA-3214-46BB-B6AF-3978A83F5939}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC1765C3-4FB1-4441-9AF8-E94254A299A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC1765C3-4FB1-4441-9AF8-E94254A299A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC1765C3-4FB1-4441-9AF8-E94254A299A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC1765C3-4FB1-4441-9AF8-E94254A299A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E69468FF-6420-493A-A6F2-2AC5B5E55959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E69468FF-6420-493A-A6F2-2AC5B5E55959}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E69468FF-6420-493A-A6F2-2AC5B5E55959}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E69468FF-6420-493A-A6F2-2AC5B5E55959}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB24AD84-874A-43E6-8084-4E2181F8D8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB24AD84-874A-43E6-8084-4E2181F8D8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB24AD84-874A-43E6-8084-4E2181F8D8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB24AD84-874A-43E6-8084-4E2181F8D8B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{364316F2-1425-4481-8E8C-B58EAC2209E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{364316F2-1425-4481-8E8C-B58EAC2209E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{364316F2-1425-4481-8E8C-B58EAC2209E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{364316F2-1425-4481-8E8C-B58EAC2209E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0647029A-F6DF-4395-8F80-8F907648F22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0647029A-F6DF-4395-8F80-8F907648F22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0647029A-F6DF-4395-8F80-8F907648F22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0647029A-F6DF-4395-8F80-8F907648F22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A308126-1C94-41ED-A4FE-8227D6D291BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A308126-1C94-41ED-A4FE-8227D6D291BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A308126-1C94-41ED-A4FE-8227D6D291BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A308126-1C94-41ED-A4FE-8227D6D291BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14A8EFC-816D-4FA3-BF14-2EA305E76230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14A8EFC-816D-4FA3-BF14-2EA305E76230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14A8EFC-816D-4FA3-BF14-2EA305E76230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14A8EFC-816D-4FA3-BF14-2EA305E76230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D4BB25D-3074-4BD6-8FF7-7E51CF3C29DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D4BB25D-3074-4BD6-8FF7-7E51CF3C29DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D4BB25D-3074-4BD6-8FF7-7E51CF3C29DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D4BB25D-3074-4BD6-8FF7-7E51CF3C29DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72374A2D-E9B5-46C8-A1AA-66E2719EFEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72374A2D-E9B5-46C8-A1AA-66E2719EFEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72374A2D-E9B5-46C8-A1AA-66E2719EFEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72374A2D-E9B5-46C8-A1AA-66E2719EFEDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30DCB65-BA5E-418D-8478-2BEE315113C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30DCB65-BA5E-418D-8478-2BEE315113C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30DCB65-BA5E-418D-8478-2BEE315113C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30DCB65-BA5E-418D-8478-2BEE315113C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
